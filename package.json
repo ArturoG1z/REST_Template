@@ -1,0 +1,22 @@
+{
+  "name": "007_restserver",
+  "version": "1.0.0",
+  "description": "REST Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest",
+    "server",
+    "express",
+    "nodejs"
+  ],
+  "author": "Felipe Arturo",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
