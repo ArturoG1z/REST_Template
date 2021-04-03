@@ -1,7 +1,6 @@
-# Weather app in console
+# REST server + Web Server
 
-A weather app to find a place and know its weather
-
+This is a template for REST Server + web server
 ---
 ## Requirements
 
@@ -34,29 +33,13 @@ If the installation was successful, you should be able to run the following comm
 If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
 
     $ npm install npm -g
-
-###
-### Yarn installation
-  After installing node, this project will need yarn too, so just run the following command.
-
-      $ npm install -g yarn
-
 ---
 
 ## Install
 
-    $ git clonehttps://github.com/ArturoG1z/app_weather_console.git
-    $ cd app_weather_console
+    $ git clone https://github.com/ArturoG1z/REST_Template
+    $ cd REST_Template
     $ npm install
-
-## Configure app
-
-Rename `example.env` to `.env` then put your environment variables with your own keys for the api used:
-
-- https://docs.mapbox.com/api/search/geocoding/
-- https://openweathermap.org/current#geo
-
-You will need to create an account on each platform to obtain their free services
 
 ## Running the project
 
