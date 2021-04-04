@@ -55,6 +55,7 @@ const usersPatch = (req = request, res = response) => {
 
 const usersDelete = async (req = request, res = response) => {
   const { id } = req.params;
+  const authenticatedUser = req.user;
 
   // physically delete from database
   // const user = await User.findByIdAndDelete(id);
