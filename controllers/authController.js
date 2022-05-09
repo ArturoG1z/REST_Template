@@ -73,7 +73,7 @@ const googleSignIn = async (req = request, res = response) => {
       token
 		});
 	} catch (error) {
-    console.log(error);
+    console.error(error);
 		res.status(401).json({
 			msg: "Invalid Google token",
 		});
