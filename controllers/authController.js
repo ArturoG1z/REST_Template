@@ -11,17 +11,17 @@ const login = async (req, res = response) => {
 		// verify if email exists
 		const user = await User.findOne({ email });
 		if (!user)
-			return res.status(400).json({
+			return res.status(401).json({
 				msg: "Incorrect user / Password - email",
 			});
 
 		if (!user.state)
-			return res.status(400).json({
+			return res.status(401).json({
 				msg: "Incorrect user / Password - state false",
 			});
 		const validPassword = bcryptjs.compareSync(password, user.password);
 		if (!validPassword)
-			return res.status(400).json({
+			return res.status(401).json({
 				msg: "Incorrect user / Password - password",
 			});
 
@@ -74,7 +74,7 @@ const googleSignIn = async (req = request, res = response) => {
 		});
 	} catch (error) {
     console.log(error);
-		res.status(400).json({
+		res.status(401).json({
 			msg: "Invalid Google token",
 		});
 	}
