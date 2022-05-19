@@ -23,7 +23,7 @@ const usersPost = async (req = request, res = response) => {
 	const user = new User({ name, email, password, role });
 
 	const salt = bcryptjs.genSaltSync(10);
-	user.password = bcryptjs.hashSync(password);
+	user.password = bcryptjs.hashSync(password, salt);
 
 	await user.save();
 
@@ -37,7 +37,7 @@ const usersPut = async (req = request, res = response) => {
 	const { _id, password, google, email, ...rest } = req.body;
 	if (password) {
 		const salt = bcryptjs.genSaltSync();
-		rest.password = bcryptjs.hashSync(password);
+		rest.password = bcryptjs.hashSync(password, salt);
 	}
 	const user = await User.findByIdAndUpdate(id, rest, { new: true });
 	res.json({
